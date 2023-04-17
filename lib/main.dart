@@ -15,6 +15,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: HomePage(),
       theme: ThemeData(primarySwatch: Colors.deepPurple),
+      // routes: {
+      //   '/second': (context) => Test(),
+      // },
     );
   }
 }
