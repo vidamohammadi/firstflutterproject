@@ -8,7 +8,7 @@ class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Navigation Example',
       home: HomePage(),
     );
@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
-                      children: [
+                      children: const [
                         Text(
                           'Hello,',
                           style: TextStyle(
@@ -44,20 +44,20 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                     Container(
-                        padding: EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
                           color: Colors.deepPurple[100],
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: Icon(Icons.person)),
+                        child: const Icon(Icons.person)),
                   ],
                 ),
               ),
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
-                  padding: EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                       color: Colors.pink[100],
                       borderRadius: BorderRadius.circular(12)),
@@ -67,36 +67,36 @@ class _HomePageState extends State<HomePage> {
                       width: 100,
                       color: Colors.deepPurple[200],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'How do you feel?',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 16),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 12,
                           ),
-                          Text(
+                          const Text(
                             'Fill out your medical card right now',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 16),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 12,
                           ),
                           Container(
-                            padding: EdgeInsets.all(12),
+                            padding: const EdgeInsets.all(12),
                             decoration: BoxDecoration(
                               color: Colors.deepPurple[300],
                               borderRadius: BorderRadius.circular(12),
                             ),
-                            child: Center(
+                            child: const Center(
                               child:
                                   Text(
                                     'Get Started',
@@ -110,15 +110,15 @@ class _HomePageState extends State<HomePage> {
                   ]),
                 ),
               ),
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
-                  padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                       color: Colors.deepPurple[100],
                       borderRadius: BorderRadius.circular(12)),
-                  child: TextField(
+                  child: const TextField(
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.search),
                       border: InputBorder.none,
@@ -127,8 +127,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              SizedBox(height: 25),
-              Container(
+              const SizedBox(height: 25),
+              SizedBox(
                   height: 80,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
@@ -146,7 +146,34 @@ class _HomePageState extends State<HomePage> {
                         iconImagePass: 'assets/icons/pills.png',
                       ),
                     ],
-                  ))
+                  )
+              ),
+              const SizedBox(height: 25,),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      'Doctor List',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20
+                      ),
+                    ),
+                    Text(
+                      'See all',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 25,),
             ],
           ),
         ));
