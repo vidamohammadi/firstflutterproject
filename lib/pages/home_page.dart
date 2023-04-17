@@ -1,4 +1,6 @@
+import 'package:firstflutterproject/util/doctor_card.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 import '../util/category_card.dart';
 
@@ -55,9 +57,9 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 25),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                padding: EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
-                  padding: const EdgeInsets.all(20),
+                  padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
                       color: Colors.pink[100],
                       borderRadius: BorderRadius.circular(12)),
@@ -65,9 +67,9 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       height: 100,
                       width: 100,
-                      color: Colors.deepPurple[200],
+                      child: Lottie.network('https://assets3.lottiefiles.com/private_files/lf30_tul1qoqd.json'),
                     ),
-                    const SizedBox(
+                     SizedBox(
                       width: 20,
                     ),
                     Expanded(
@@ -173,7 +175,37 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              SizedBox(height: 25,),
+              const SizedBox(height: 25,),
+
+              Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        DoctorCard(
+                          doctorImagePath: 'assets/images/doctor1.jpg',
+                          rating:'4.7',
+                          doctorName:'Dr.McCoy',
+                          doctorProfession:'Surgeon'
+                        ),
+                        DoctorCard(
+                          doctorImagePath: 'assets/images/doctor1.jpg',
+                          rating:'4.7',
+                          doctorName:'Dr.McCoy',
+                          doctorProfession:'Surgeon'
+                        ),
+                        DoctorCard(
+                          doctorImagePath: 'assets/images/doctor1.jpg',
+                          rating:'4.7',
+                          doctorName:'Dr.McCoy',
+                          doctorProfession:'Surgeon'
+                        ),
+                      ],
+                    ),
+                  )
+              )
+
             ],
           ),
         ));
